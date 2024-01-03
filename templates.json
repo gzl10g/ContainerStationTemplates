@@ -81,11 +81,6 @@
         {
           "container": "/certs",
           "volume": "certs-vol"
-        },
-        {
-          "container": "/var/run/docker.sock",
-          "bind": "/var/run/docker.sock ",
-          "readonly": true
         }
       ],
       "env": [
