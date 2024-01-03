@@ -9,7 +9,13 @@
       "platform": "linux/amd64",
       "hostname": "upsnap",
       "image": "nkb777/upsnap:v1",
-      "ports": [ "83:8090/tcp" ]
+      "ports": [ "83:8090/tcp" ],
+      "volumes": [
+        {
+          "container": "/app/pb_data",
+          "volume": "upsnap-vol"
+        }
+      ]
     }
   ]
 }
