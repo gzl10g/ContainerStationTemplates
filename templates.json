@@ -18,6 +18,27 @@
         }
       ],
       "privileged": true
+    },
+    {
+      "type": 1,
+      "title": "heimdall",
+      "sub_title": "2.5.8",
+      "description": "Heimdall is a way to organise all those links to your most used web sites and web applications in a simple way.",
+      "logo": "https://raw.githubusercontent.com/gzl10g/ContainerStationTemplates/main/logos/heimdall.png",
+      "location": "https://hub.docker.com/r/linuxserver/heimdall",
+      "platform": "linux/amd64",
+      "hostname": "heimdall",
+      "image": "linuxserver/heimdall:2.5.8",
+      "ports": [ "80:80/tcp" ],
+      "volumes": [
+        {
+          "container": "/config",
+          "volume": "heimdall-vol"
+        }
+      ],
+      "env": [
+        { "name": "TZ", "value": "Europe/Madrid" }
+      ]
     }
   ]
 }
