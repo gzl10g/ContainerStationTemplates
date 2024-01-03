@@ -72,7 +72,7 @@
       "platform": "linux/amd64",
       "hostname": "traefik",
       "image": "traefik:v2.10",
-      "ports": [ "88:80/tcp", "8080:8080/udp" ],
+      "ports": [ "80:80/tcp", "443:443/tcp", "8080:8080/tcp" ],
       "volumes": [
         {
           "container": "/config",
