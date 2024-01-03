@@ -93,9 +93,9 @@
         { "name": "TRAEFIK_PROVIDERS_DOCKER", "value": "true" },
         { "name": "TRAEFIK_PROVIDERS_DOCKER_ENDPOINT", "value": "tcp://10.0.4.100:2376" },
         { "name": "TRAEFIK_PROVIDERS_DOCKER_TLS_INSECURESKIPVERIFY", "value": "true" },
-        { "name": "TRAEFIK_PROVIDERS_DOCKER_TLS_KEY", "value": "TLS Key" },
-        { "name": "TRAEFIK_PROVIDERS_DOCKER_TLS_CERT", "value": "TLS Cert" },
-        { "name": "TRAEFIK_PROVIDERS_DOCKER_TLS_CA", "value": "TLS CA" }
+        { "name": "TRAEFIK_PROVIDERS_DOCKER_TLS_KEY", "value": "/certs/cs/key.pem" },
+        { "name": "TRAEFIK_PROVIDERS_DOCKER_TLS_CERT", "value": "/certs/cs/cert.pem" },
+        { "name": "TRAEFIK_PROVIDERS_DOCKER_TLS_CA", "value": "/certs/cs/ca.pem" }
       ]
     }
   ]
