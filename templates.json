@@ -15,7 +15,8 @@
           "container": "/app/pb_data",
           "volume": "upsnap-vol"
         }
-      ]
+      ],
+      "privileged": true
     }
   ]
 }
