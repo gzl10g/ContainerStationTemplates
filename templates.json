@@ -39,6 +39,39 @@
       "env": [
         { "name": "TZ", "value": "Europe/Madrid" }
       ]
+    },
+    {
+      "type": 1,
+      "title": "traefik",
+      "sub_title": "v2.10",
+      "description": "Traefik is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy.",
+      "logo": "https://raw.githubusercontent.com/gzl10g/ContainerStationTemplates/main/logos/traefik.png",
+      "location": "https://hub.docker.com/_/traefik",
+      "platform": "linux/amd64",
+      "hostname": "traefik",
+      "image": "traefik:v2.10",
+      "ports": [ "88:80/tcp", "8080:8080/udp" ],
+      "volumes": [
+        {
+          "container": "/config",
+          "volume": "traefik-vol",
+          "readonly": true
+        },
+        {
+          "container": "/certs",
+          "volume": "certs-vol",
+          "readonly": true
+        },
+        {
+          "container": "/var/run/docker.sock",
+          "bind": "/var/run/docker.sock ",
+          "readonly": true
+        }
+      ],
+      "env": [
+        { "name": "TZ", "value": "Europe/Madrid" }
+      ],
+      "command": "--global.sendAnonymousUsage=false --api.dashboard=true"
     }
   ]
 }
