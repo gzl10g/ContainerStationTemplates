@@ -6,6 +6,7 @@
       "sub_title": "4.1.4",
       "description": "A simple wake on lan web app written with SvelteKit, Go and PocketBase.",
       "logo": "https://raw.githubusercontent.com/gzl10g/ContainerStationTemplates/main/logos/upsnap.png",
+      "location": "https://hub.docker.com/r/nkb777/upsnap",
       "platform": "linux/amd64",
       "hostname": "upsnap",
       "image": "nkb777/upsnap:v1",
