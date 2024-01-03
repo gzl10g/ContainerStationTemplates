@@ -5,7 +5,7 @@
       "title": "upsnap",
       "sub_title": "upsnap",
       "description": "A simple wake on lan web app written with SvelteKit, Go and PocketBase.",
-      "logo": "https://github.com/seriousm4x/UpSnap/blob/master/frontend/static/gopher.svg",
+      "logo": "logos/upsnap.png",
       "platform": "linux/amd64",
       "image": "nkb777/upsnap:v1",
       "ports": [ "83:8090/tcp" ]
