@@ -54,13 +54,11 @@
       "volumes": [
         {
           "container": "/config",
-          "volume": "traefik-vol",
-          "readonly": true
+          "volume": "traefik-vol"
         },
         {
           "container": "/certs",
-          "volume": "certs-vol",
-          "readonly": true
+          "volume": "certs-vol"
         },
         {
           "container": "/var/run/docker.sock",
