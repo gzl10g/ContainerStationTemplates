@@ -69,7 +69,11 @@
       "env": [
         { "name": "TZ", "value": "Europe/Madrid" },
         { "name": "TRAEFIK_PROVIDERS_DOCKER", "value": "true" },
-        { "name": "TRAEFIK_PROVIDERS_DOCKER_ENDPOINT", "value": "tcp://10.0.4.100:2376 DOCKER_TLS_VERIFY=1" }
+        { "name": "TRAEFIK_PROVIDERS_DOCKER_ENDPOINT", "value": "tcp://10.0.4.100:2376" },
+        { "name": "TRAEFIK_PROVIDERS_DOCKER_TLS_INSECURESKIPVERIFY", "value": "true" },
+        { "name": "TRAEFIK_PROVIDERS_DOCKER_TLS_KEY", "value": "TLS Key" },
+        { "name": "TRAEFIK_PROVIDERS_DOCKER_TLS_CERT", "value": "TLS Cert" },
+        { "name": "TRAEFIK_PROVIDERS_DOCKER_TLS_CA", "value": "TLS CA" }
       ]
     }
   ]
