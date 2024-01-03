@@ -5,7 +5,7 @@
       "title": "upsnap",
       "sub_title": "upsnap",
       "description": "A simple wake on lan web app written with SvelteKit, Go and PocketBase.",
-      "logo": "https://github.com/gzl10g/ContainerStationTemplates/blob/518d556cb5fd423b253a4da17ab9d77d47bf940b/logos/upsnap.png",
+      "logo": "https://github.com/gzl10g/ContainerStationTemplates/blob/518d556cb5fd423b253a4da17ab9d77d47bf940b/logos/upsnap.png?raw=true",
       "platform": "linux/amd64",
       "image": "nkb777/upsnap:v1",
       "ports": [ "83:8090/tcp" ]
