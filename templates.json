@@ -68,8 +68,7 @@
       ],
       "env": [
         { "name": "TZ", "value": "Europe/Madrid" }
-      ],
-      "command": "--global.sendAnonymousUsage=false --api.dashboard=true"
+      ]
     }
   ]
 }
