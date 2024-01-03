@@ -90,7 +90,8 @@
         { "name": "TRAEFIK_PROVIDERS_DOCKER_TLS_INSECURESKIPVERIFY", "value": "true" },
         { "name": "TRAEFIK_PROVIDERS_DOCKER_TLS_KEY", "value": "/certs/cs/key.pem" },
         { "name": "TRAEFIK_PROVIDERS_DOCKER_TLS_CERT", "value": "/certs/cs/cert.pem" },
-        { "name": "TRAEFIK_PROVIDERS_DOCKER_TLS_CA", "value": "/certs/cs/ca.pem" }
+        { "name": "TRAEFIK_PROVIDERS_DOCKER_TLS_CA", "value": "/certs/cs/ca.pem" },
+        { "name": "TRAEFIK_PROVIDERS_DOCKER_EXPOSEDBYDEFAULT", "value": "false" }
       ]
     }
   ]
