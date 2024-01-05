@@ -1,0 +1,16 @@
+name: Publish Files on Main Commit
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Copy Files to Remote Server
+        run: scp -r * gzl10g@noa:/share/Web
