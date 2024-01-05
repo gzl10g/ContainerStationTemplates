@@ -13,12 +13,12 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Create logos folder
-        run: ssh gzl10g@noa 'mkdir -p /share/Web/logos'
+        run: ssh gzl10g@10.0.4.100 'mkdir -p /share/Web/logos'
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Copy Files to Remote Server
-        run: scp -r * gzl10g@noa:/share/Web
+        run: scp -r * gzl10g@10.0.4.100:/share/Web
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
       
