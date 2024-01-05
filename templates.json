@@ -72,7 +72,7 @@
       "platform": "linux/amd64",
       "hostname": "ldap-user-manager",
       "image": "wheelybird/ldap-user-manager:v1.11",
-      "ports": [ "80:80/tcp" ],
+      "ports": [ "89:80/tcp" ],
       "env": [
         { "name": "TZ", "value": "Europe/Madrid" },
         { "name": "SERVER_HOSTNAME", "value": "ldap.docker.lan" },
@@ -82,7 +82,9 @@
         { "name": "LDAP_ADMINS_GROUP", "value": "admins" },
         { "name": "LDAP_ADMIN_BIND_DN", "value": "cn=admin,dc=home,dc=lan" },
         { "name": "LDAP_ADMIN_BIND_PWD", "value": "wlPyHpsKu8qUjS" },
-        { "name": "LDAP_IGNORE_CERT_ERRORS", "value": "true" }
+        { "name": "LDAP_IGNORE_CERT_ERRORS", "value": "true" },
+        { "name": "NO_HTTPS", "value": "true" },
+        { "name": "LDAP_REQUIRE_STARTTLS", "value": "false" }
       ]
     },
     {
