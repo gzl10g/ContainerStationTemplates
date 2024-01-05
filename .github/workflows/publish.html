@@ -12,8 +12,18 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Create logos directoru
+      - name: Create logos folder
         run: ssh gzl10g@noa 'mkdir -p /share/Web/logos'
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
 
       - name: Copy Files to Remote Server
         run: scp -r * gzl10g@noa:/share/Web
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+      
+      - name: Set Permissions for SSH Private Key
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
+          chmod 600 ~/.ssh/id_ed25519
