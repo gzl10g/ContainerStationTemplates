@@ -64,6 +64,29 @@
     },
     {
       "type": 1,
+      "title": "ldap-user-manager",
+      "sub_title": "1.11",
+      "description": "A modern LDAP web GUI user manager and group manager, including self-service password changing.",
+      "logo": "https://raw.githubusercontent.com/gzl10g/ContainerStationTemplates/main/logos/ldap.png",
+      "location": "https://hub.docker.com/r/wheelybird/ldap-user-manager",
+      "platform": "linux/amd64",
+      "hostname": "ldap-user-manager",
+      "image": "wheelybird/ldap-user-manager:v1.11",
+      "ports": [ "80:80/tcp" ],
+      "env": [
+        { "name": "TZ", "value": "Europe/Madrid" },
+        { "name": "SERVER_HOSTNAME", "value": "ldap.docker.lan" },
+        { "name": "LDAP_URI", "value": "ldap://10.0.4.5" },
+        { "name": "LDAP_BASE_DN", "value": "dc=home,dc=lan" },
+        { "name": "LDAP_REQUIRE_STARTTLS", "value": "false" },
+        { "name": "LDAP_ADMINS_GROUP", "value": "admins" },
+        { "name": "LDAP_ADMIN_BIND_DN", "value": "cn=admin,dc=home,dc=lan" },
+        { "name": "LDAP_ADMIN_BIND_PWD", "value": "wlPyHpsKu8qUjS" },
+        { "name": "LDAP_IGNORE_CERT_ERRORS", "value": "true" }
+      ]
+    },
+    {
+      "type": 1,
       "title": "traefik",
       "sub_title": "v2.10",
       "description": "Traefik is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy.",
