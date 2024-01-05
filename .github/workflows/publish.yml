@@ -1,4 +1,4 @@
-name: Publish Files on Main Commit
+name: Publish Files to Local Server
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  publish:
+  publish-files:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
