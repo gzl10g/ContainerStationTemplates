@@ -12,18 +12,14 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Create logos folder
-        run: ssh -o StrictHostKeyChecking=no gzl10g@10.0.4.100 'mkdir -p /share/Web/logos'
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      - name: Copy Files to Remote Server
-        run: scp -o StrictHostKeyChecking=no -r * gzl10g@10.0.4.100:/share/Web
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-      
       - name: Set Permissions for SSH Private Key
         run: |
           mkdir -p ~/.ssh
-          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_ed25519
-          chmod 600 ~/.ssh/id_ed25519
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+
+      - name: Create logos folder
+        run: ssh -o StrictHostKeyChecking=no gzl10g@10.0.4.100 'mkdir -p /share/Web/logos'
+       
+      - name: Copy Files to Remote Server
+        run: scp -o StrictHostKeyChecking=no -r * gzl10g@10.0.4.100:/share/Web
