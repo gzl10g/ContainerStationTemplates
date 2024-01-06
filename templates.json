@@ -93,7 +93,7 @@
       "sub_title": "1.5.0",
       "description": "OpenLDAP with TLS, multi master replication and easy bootstrap.",
       "logo": "https://raw.githubusercontent.com/gzl10g/ContainerStationTemplates/main/logos/oxiaopenldap.png",
-      "location": "https://hub.docker.com/r/wheelybird/ldap-user-manager",
+      "location": "https://github.com/osixia/docker-openldap",
       "platform": "linux/amd64",
       "hostname": "openldap",
       "image": "osixia/openldap:1.5.0",
@@ -104,8 +104,7 @@
         { "name": "LDAP_DOMAIN", "value": "home.lan" },
         { "name": "LDAP_ADMIN_PASSWORD", "value": "wlPyHpsKu8qUjS" },
         { "name": "LDAP_RFC2307BIS_SCHEMA", "value": "true" },
-        { "name": "LDAP_REMOVE_CONFIG_AFTER_SETUP", "value": "true" },
-        { "name": "LDAP_TLS_VERIFY_CLIENT", "value": "false" }
+        { "name": "LDAP_TLS", "value": "false" }
       ],
       "volumes": [
         {
@@ -116,6 +115,23 @@
           "container": "/etc/ldap/slapd.d",
           "volume": "ldap-config-vol"
         }
+      ]
+    },
+    {
+      "type": 1,
+      "title": "oxiaopenldap-admin",
+      "sub_title": "0.9.0",
+      "description": "A docker image to run phpLDAPadmin.",
+      "logo": "https://raw.githubusercontent.com/gzl10g/ContainerStationTemplates/main/logos/oxiaopenldap.png",
+      "location": "https://github.com/osixia/docker-phpLDAPadmin",
+      "platform": "linux/amd64",
+      "hostname": "openldap",
+      "image": "osixia/phpldapadmin:0.9.0",
+      "ports": [ "91:80/tcp" ],
+      "env": [
+        { "name": "TZ", "value": "Europe/Madrid" },
+        { "name": "PHPLDAPADMIN_HTTPS", "value": "false" },
+        { "name": "PHPLDAPADMIN_LDAP_HOSTS", "value": "#PYTHON2BASH:[{'10.0.4.100': [{'server': [{'tls': false}]},{'login': [{'bind_id': 'cn=admin,dc=home,dc=lan'},{'bind_pass': 'wlPyHpsKu8qUjS'}]}]}]" }
       ]
     },
     {
