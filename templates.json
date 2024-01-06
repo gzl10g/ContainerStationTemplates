@@ -78,13 +78,12 @@
         { "name": "SERVER_HOSTNAME", "value": "ldap.docker.lan" },
         { "name": "LDAP_URI", "value": "ldap://10.0.4.5" },
         { "name": "LDAP_BASE_DN", "value": "dc=home,dc=lan" },
-        { "name": "LDAP_REQUIRE_STARTTLS", "value": "false" },
+        { "name": "LDAP_REQUIRE_STARTTLS", "value": "FALSE" },
         { "name": "LDAP_ADMINS_GROUP", "value": "admins" },
         { "name": "LDAP_ADMIN_BIND_DN", "value": "cn=admin,dc=home,dc=lan" },
         { "name": "LDAP_ADMIN_BIND_PWD", "value": "wlPyHpsKu8qUjS" },
         { "name": "LDAP_IGNORE_CERT_ERRORS", "value": "true" },
-        { "name": "NO_HTTPS", "value": "true" },
-        { "name": "LDAP_REQUIRE_STARTTLS", "value": "false" }
+        { "name": "NO_HTTPS", "value": "true" }
       ]
     },
     {
