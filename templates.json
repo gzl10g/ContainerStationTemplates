@@ -130,6 +130,7 @@
       "ports": [ "91:80/tcp" ],
       "env": [
         { "name": "TZ", "value": "Europe/Madrid" },
+        { "name": "PHPLDAPADMIN_LDAP_HOSTS", "value": "10.0.4.100" },
         { "name": "PHPLDAPADMIN_HTTPS", "value": "false" }
       ],
       "volumes": [
