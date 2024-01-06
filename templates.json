@@ -76,7 +76,7 @@
       "env": [
         { "name": "TZ", "value": "Europe/Madrid" },
         { "name": "SERVER_HOSTNAME", "value": "ldap.docker.lan" },
-        { "name": "LDAP_URI", "value": "ldap://10.0.4.5" },
+        { "name": "LDAP_URI", "value": "ldap://10.0.4.100" },
         { "name": "LDAP_BASE_DN", "value": "dc=home,dc=lan" },
         { "name": "LDAP_REQUIRE_STARTTLS", "value": "false" },
         { "name": "LDAP_ADMINS_GROUP", "value": "admins" },
