@@ -125,13 +125,18 @@
       "logo": "https://raw.githubusercontent.com/gzl10g/ContainerStationTemplates/main/logos/oxiaopenldap.png",
       "location": "https://github.com/osixia/docker-phpLDAPadmin",
       "platform": "linux/amd64",
-      "hostname": "openldap",
+      "hostname": "openldap-admin",
       "image": "osixia/phpldapadmin:0.9.0",
       "ports": [ "91:80/tcp" ],
       "env": [
         { "name": "TZ", "value": "Europe/Madrid" },
-        { "name": "PHPLDAPADMIN_HTTPS", "value": "false" },
-        { "name": "PHPLDAPADMIN_LDAP_HOSTS", "value": "#PYTHON2BASH:[{'10.0.4.100': [{'server': [{'tls': false}]},{'login': [{'bind_id': 'cn=admin,dc=home,dc=lan'},{'bind_pass': 'wlPyHpsKu8qUjS'}]}]}]" }
+        { "name": "PHPLDAPADMIN_HTTPS", "value": "false" }
+      ],
+      "volumes": [
+        {
+          "container": "/var/www/phpldapadmin",
+          "volume": "ldap-admin-vol"
+        }
       ]
     },
     {
