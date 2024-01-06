@@ -89,6 +89,37 @@
     },
     {
       "type": 1,
+      "title": "oxiaopenldap",
+      "sub_title": "1.5.0",
+      "description": "OpenLDAP with TLS, multi master replication and easy bootstrap.",
+      "logo": "https://raw.githubusercontent.com/gzl10g/ContainerStationTemplates/main/logos/oxiaopenldap.png",
+      "location": "https://hub.docker.com/r/wheelybird/ldap-user-manager",
+      "platform": "linux/amd64",
+      "hostname": "openldap",
+      "image": "osixia/openldap:1.5.0",
+      "ports": [ "389:389/tcp" ],
+      "env": [
+        { "name": "TZ", "value": "Europe/Madrid" },
+        { "name": "LDAP_ORGANISATION", "value": "gzl10" },
+        { "name": "LDAP_DOMAIN", "value": "home.lan" },
+        { "name": "LDAP_ADMIN_PASSWORD", "value": "wlPyHpsKu8qUjS" },
+        { "name": "LDAP_RFC2307BIS_SCHEMA", "value": "true" },
+        { "name": "LDAP_REMOVE_CONFIG_AFTER_SETUP", "value": "true" },
+        { "name": "LDAP_TLS_VERIFY_CLIENT", "value": "false" }
+      ],
+      "volumes": [
+        {
+          "container": "/var/lib/ldap",
+          "volume": "ldap-vol"
+        },
+        {
+          "container": "/etc/ldap/slapd.d",
+          "volume": "ldap-config-vol"
+        }
+      ]
+    },
+    {
+      "type": 1,
       "title": "traefik",
       "sub_title": "v2.10",
       "description": "Traefik is a modern HTTP reverse proxy and load balancer that makes deploying microservices easy.",
