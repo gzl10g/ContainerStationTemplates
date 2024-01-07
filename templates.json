@@ -32,6 +32,8 @@
       "platform": "linux/amd64",
       "hostname": "nginx",
       "image": "nginx:latest",
+      "command": "nginx -g 'daemon off;'",
+      "entrypoint": "/docker-entrypoint.sh",
       "ports": [ "80:80/tcp" ],
       "env": [
         { "name": "TZ", "value": "Europe/Madrid" }
